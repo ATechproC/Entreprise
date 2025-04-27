@@ -1,0 +1,186 @@
+/* start design menu */
+
+.menu .nav ul li:nth-child(3) >  a {
+    border-color: #fff;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* end design menu */
+
+/* start desing cards  */
+
+.container-box {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: space-around;
+}
+
+.box-card {
+    perspective: 10000px;
+    width: fit-content;
+}
+
+.box-card .card {
+    position: relative;
+    transform-style: preserve-3d;
+    height: 439px;
+    width: 380px;
+    border-radius: 10px;
+    transition: transform 1s ease;
+} 
+
+#card1 {
+    left: -200%;
+    animation: cardleft 1.6s ease forwards;
+}
+
+@keyframes cardleft {
+    0% {
+        left: -200%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+#card2 {
+    right: -200%;
+    animation: cardright 1.6s ease forwards;
+}
+
+@keyframes cardright {
+    0% {
+        right: -200%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.return {
+    transform: rotateY(180deg);
+}
+
+.box-card .fb {
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
+    background-color: #fff;
+    width: 380px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+    overflow: hidden;
+    cursor: default;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.box-card .back.fb {
+    transform: rotateY(180deg);
+}
+
+.box-card .fb .box-img {
+    position: relative;
+    width: 320px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box-card .fb .box-img::before {
+    content : "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.fb .box-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: content;
+}
+
+.fb .desc {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.fb .desc .title {
+    font-weight: bold;
+    font-size: 22px;
+    word-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.fb .desc .para {
+    font-size: 18px;
+    word-spacing: 1px;
+    color: rgb(65, 64, 64);
+}
+
+.control-flip {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.control-flip .btn {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 13px rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 200px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
+}
+
+.control-flip .btn:hover,
+.btn.activeBtn {
+    background-color: rgba(0, 0, 0,.9);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+#btn1 {
+    left: -230%;
+    animation: btnleft 1.5s ease forwards;
+    animation-delay: 1.1s;
+}
+
+@keyframes btnleft {
+    0% {
+        left: -230%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+#btn2 {
+    right: -230%;
+    animation: btnright 1.5s ease forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes btnright {
+    0% {
+        right: -230%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+/* end desing cards  */
+

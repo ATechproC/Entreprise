@@ -1,0 +1,125 @@
+/* start design menu */
+
+.menu .nav ul li:nth-child(2) >  a {
+    border-color: #fff;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* end design menu */
+
+/* strat conteiner content  */
+
+.container-content {
+    height: 80%;
+    width: 99%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-content .box-items {
+    position: relative;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    cursor: default;
+    transform: scale(0.987);
+    transition: transform 0.5s ease;
+}
+
+.container-content .box-items:hover {
+    transform: translateY(-4px) scale(1);
+}
+
+.container-content .box-items:nth-child(1),
+.container-content .box-items:nth-child(3)  {
+    left: -130%;
+    animation: left 2.1s ease forwards;
+}
+
+.container-content .box-items:nth-child(2)  {
+    right: -130%;
+    animation: right 2.1s ease forwards;
+}
+
+@keyframes left {
+    0% {
+        left: -130%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes right {
+    0% {
+        right: -130%;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+.container-content .box-items::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #000;
+    border-radius: 10px;
+    transition: .9s ease;
+}
+
+.container-content .box-items:hover::after {
+    width: 100%;
+}
+
+.container-content .box-items .step,
+.container-content .box-items .content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.container-content .box-items .step {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.container-content .box-items:hover .step {
+    animation:  title 1s linear infinite;
+}
+
+@keyframes title {
+    0%,100% {
+        color: #f80275;
+        text-shadow: 0 0 0 #f80275;
+    }
+    50% {
+        color: #f80275;
+        text-shadow: 0 0 20px #f80275;
+    }
+}
+
+.container-content .box-items .content {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    word-spacing: 1px;
+    color: grey;
+    line-height: 1.2;
+    transition: color 0.8s ease;
+}
+
+.container-content .box-items:hover .content {
+    color: #fff;
+}
+
+/* end conteiner content  */

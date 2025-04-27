@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #d8d7d7;
+}
+
+
+.acceuil-btn {
+    position: absolute;
+    z-index: 20;
+    top: 20px;
+    left: 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px #fff;
+    transition: box-shadow 0.4s ease;
+}
+
+
+.acceuil-btn:hover {
+    box-shadow: 0 0 13px #fff;
+}
+
+.acceuil-btn > a {
+    text-decoration: none;
+    display: block;
+    padding: 7px 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px #fff;
+}
+
+.box-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.box-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+}
+
+
+/* start section premier page */
+
+.section1 {
+    position: relative;
+    height: 100%;
+}
+
+.design-part {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 12px solid #000;
+    border-radius: 30px;
+    background-image: url("../images/ensa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: default;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+}
+
+.bg {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-color: #000;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.shape {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px;
+    width: 104px;
+    height: 35px;
+    background-color: #000;
+    border-radius: 12px;
+}
+
+.cercle {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: rgb(65, 63, 63);
+    border-radius: 50%;
+}
+
+.small-cercle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.small-shape1 {
+    position: absolute;
+    z-index: 3;
+    width: 485px;
+    left: 0;
+    top: -2px;
+    height: 22px;
+    background-color: gray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 18px;
+    display: none;
+}
+
+.small-shape2 {
+    position: absolute;
+    z-index: 3;
+    width: 486px;
+    right: 0;
+    top: -2px;
+    height: 22px;
+    background-color: gray;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 10px;
+    display: none;
+}
+
+.desc {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 97%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    left: -23%;
+    animation: logo 1.5s ease-in-out forwards;
+}
+
+@keyframes logo {
+    0% {
+        left: -23%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.universite {
+    transform: translateX(820px);
+    animation: uni 1.5s ease-in-out forwards;
+}
+
+@keyframes uni {
+    0% {
+        transform: translateX(990px);
+    }
+    100% {
+        transform: translateX(820px);
+    }
+}
+
+.logo,
+.universite {
+    width: 200px;
+    height: 70px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.universite img {
+    width: 100%;
+    height: 100%;
+    object-fit: content;
+}
+
+.info {
+    position: absolute;
+    left: 52%;
+    translate: -50% 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 25px;
+    color: #000;
+    white-space: nowrap;
+}
+
+.section1 .info1 {
+    font-size: 30px;
+    margin-left: -60px;
+}
+
+.title-general {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate : -50% -50%;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 53px;
+    width: 87%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.title-general span {
+    opacity: 0;
+    animation: animation 0.5s linear forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+}
+
+.organisateur {
+    position: absolute;
+    z-index: 6;
+    left: 7%;
+    bottom: 40px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.realisateur,
+.prof-na {
+    position: relative;
+}
+
+.realisateur {
+    margin-bottom: 4px;
+}
+
+.prof-na {
+    margin-bottom: 8px;
+}
+
+.realisateur::after,
+.prof-na:after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: -2px;
+    height: 2px;
+    background-color: #000;
+}
+
+.realisateur::after {
+    width: 70%;
+}
+
+.prof-na:after {
+    width: 50%;
+}
+
+.prof {
+    position: absolute;
+    z-index: 6;
+    right: 10%;
+    bottom: 66px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.anass, .saad {
+    margin-left: 20px;
+    line-height: 1.3;
+}
+
+/* start desing A_Techpro_C  */ 
+
+.A_Techpro_C {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+    bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 29px;
+    cursor: default;
+}
+
+.A_Techpro_C span {
+    position: relative;
+    opacity: 0;
+    right: 0;
+    animation: anass 1.6s ease forwards, pro 1.5s linear infinite;
+    animation-delay: calc(var(--i) * .8s), calc(var(--i) * 0.3s);
+}
+
+@keyframes anass {
+    0% {
+        right: -210px;
+        opacity: 0;
+    }
+    100% {
+        right: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes pro {
+    0%, 100% {
+        text-shadow: 0 0 0 #fff;
+    }
+    50% {
+        text-shadow: 0 0 22px #fff;
+    }
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 24px;
+    width: 80%;
+    text-align: center;
+    text-shadow: 0 0 14px #fff;
+    transition: color 0.4s ease;
+    line-height: 1.3;
+    display: none;
+}
+
+.container-switch {
+    position: relative;
+    left: 20px;
+    top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: background-color 0.4s ease;
+}
+
+.btn-switch {
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: left 0.4s ease, background-color 0.4s ease;
+}
+
+.black {
+    background-color: #000;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.color {
+    color: #000;
+}
+
+.left {
+    left: 63px;
+}
+
+.marquee {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+}
+
+.text {
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 5px 0;
+    width: fit-content;
+    white-space: nowrap;
+    position: relative;
+    text-shadow: 0 0 14px #fff;
+    transition: color 0.4s ease;
+    animation: marquee 5s linear infinite;
+}
+
+.textColor {
+    color: #000;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(185%)
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.text::first-letter {
+    text-transform: capitalize;
+}
+/* end desing A_Techpro_C  */ 
+
+/* start media queries  */
+
+@media (max-width : 1220px) {
+    body {
+        background-color: #000;
+        height: 100vh;
+        color: #fff;
+        transition: background-color 0.4s ease;
+        overflow: hidden;
+    }
+    .acceuil-btn,
+    .A_Techpro_C,
+    .section1{
+        display: none;
+    }
+    .message {
+        display: block;
+    }
+    .marquee {
+        display: block;
+    }
+}
+
+@media (min-width : 1024px) {
+    .shape {
+        z-index: 4;
+    }
+}
+
+/* end media queries  */

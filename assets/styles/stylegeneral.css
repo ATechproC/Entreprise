@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+} 
+
+body {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+.bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: img-bg1 2.7s ease-out forwards;
+}
+
+@keyframes img-bg1 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+} 
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.6);
+    width: 70px;
+    height: 100%;
+    padding: 10px;
+    transition: left 1s ease;
+    overflow: hidden;
+    transition: width 0.4s linear;
+}
+
+.menu span {
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+    font-weight: bold;
+    color: #fff;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+span.times {
+    position: absolute;
+    left: 290px;
+    transition: display 0.3s ease;
+}
+
+span.bars {
+    left: 20px;
+}
+
+.menu .nav {
+    height: 100%;
+    padding-top: 35px;
+}
+
+.menu .nav ul {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+
+.menu .nav ul li a {
+    display: block;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 37px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    padding-left: 13px;
+}
+
+.menu .nav ul li a:hover,
+.menu .nav ul li a.active {
+    border-color: #fff;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.6);
+}
+
+.menu .nav ul li a .desc {
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.menu .nav ul li a .fa {
+    font-size: 20px;
+}
+
+.menu .nav ul li.exepct {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
+/* start section main  */
+
+.section-main {
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 91%;
+    transition: left 0.4s linear;
+}
+
+.title-general {
+    color:#fff;
+    text-align: center;
+    font-weight: 700;
+    font-size: 38px;
+    width: 700px;
+    margin: auto;
+}
+
+.title-general span {
+    opacity: 0;
+    animation: animation 0.3s linear forwards, restaurant 1s linear infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes restaurant {
+    0%,100% {
+        text-shadow: 0 0 0 #fff;
+    }
+    50% {
+        text-shadow: 0 0 18px #fff;
+    }
+}
+
+/* endt section main  */
+
+/* start desing A_Techpro_C  */ 
+
+/* .A_Techpro_C {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    z-index: 200;
+    cursor: default;
+}
+
+.A_Techpro_C span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 0.5s ease forwards,animationName 1.4s linear infinite;
+    animation-delay: calc(var(--i) * 0.5s), calc(var(--i) * 0.3s);
+}
+
+@keyframes animationName {
+    0%,100% {
+        text-shadow: 0 0 0 #fff;
+    }
+    50% {
+        text-shadow: 0 0 20px #fff;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */
+
+.A_Techpro_C {
+    position: absolute;
+    z-index: 100;
+    right: 30px;
+    bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 29px;
+    cursor: default;
+}
+
+.A_Techpro_C span {
+    position: relative;
+    opacity: 0;
+    right: 0;
+    animation: anass 1s ease forwards, pro 1.5s linear infinite;
+    animation-delay: calc(var(--i) * .8s), calc(var(--i) * 0.3s);
+}
+
+@keyframes anass {
+    0% {
+        right: -210px;
+        opacity: 0;
+    }
+    100% {
+        right: -10px;
+        opacity: 1;
+    }
+}
+
+@keyframes pro {
+    0%, 100% {
+        text-shadow: 0 0 0 #fff;
+    }
+    50% {
+        text-shadow: 0 0 22px #fff;
+    }
+}
+
+/* end desing A_Techpro_C  */ 
+
